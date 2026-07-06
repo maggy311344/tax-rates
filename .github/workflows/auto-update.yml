@@ -2,7 +2,7 @@ name: Auto Update ATO Tax Rates
 
 on:
   schedule:
-    # 📅 定時鬧鐘：每個月的 1 號號凌晨 0:00 自動執行 (UTC 時間)
+    # 📅 定時鬧鐘：每個月的 1 號凌晨 0:00 自動執行 (UTC 時間)
     - cron: '0 0 1 * *'
   workflow_dispatch: # 允許您隨時手動點擊按鈕強制執行
 
@@ -18,8 +18,6 @@ jobs:
 
     - name: 設定 Python 環境
       uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
 
     - name: 安裝必要套件
       run: |
