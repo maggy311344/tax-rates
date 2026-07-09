@@ -135,5 +135,14 @@ def fetch_and_update():
         
     print(f"表格化 JSON 檔案已全自動更新成功！目前判定財年區間為: {next_fy_str}")
 
+    # 🌟 關鍵新步驟：產生計算機專用的 JSON 資料結構
+    final_calc_json = convert_to_calculator_format(rates_data)
+
+    # 將計算機專用格式寫入 'tax-rates.json' (這就是你網頁 fetch 的那個檔案)
+    with open('tax-rates.json', 'w', encoding='utf-8') as f:
+        json.dump(final_calc_json, f, indent=2, ensure_ascii=False)
+        
+    print("計算機專用 tax-rates.json 檔案也同步產出完成！")
+
 if __name__ == "__main__":
     fetch_and_update()
