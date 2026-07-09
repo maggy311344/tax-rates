@@ -1,10 +1,44 @@
 import json
 from datetime import datetime
-
+    
 def convert_to_table_format(raw_data):
     """
     將計算用的稅率結構，全自動轉換為好讀的『表格 JSON 格式』
     """
+    calc_json = {}
+    for fy, identities in raw_data.items():
+        # 網頁選單格式為 "2025/26"，將 Python 的 "2025-26" 轉換為 "2025/26"
+        web_fy_key = fy.replace("-", "/")
+        
+        calc_json[web_fy_key] = {
+            "resident": [],
+            "foreign": [] # 對齊網頁前端使用的 "foreign" 屬性名
+        }
+        
+        # 轉換居民稅率級距
+        prev_limit = 0
+        for item in identities["resident"]:
+            calc_json[web_fy_key]["resident"].append({
+                "min": prev_limit,
+                "max": item["limit"],
+                "rate": item["rate"]
+            })
+            if item["limit"] is not None:
+                prev_limit = item["limit"]
+                
+        # 轉換外國居民稅率級距
+        prev_limit = 0
+        for item in identities["foreign_resident"]:
+            calc_json[web_fy_key]["foreign"].append({
+                "min": prev_limit,
+                "max": item["limit"],
+                "rate": item["rate"]
+            })
+            if item["limit"] is not None:
+                prev_limit = item["limit"]
+                
+    return calc_json
+    
     table_json = {
         "description": "澳洲歷年稅率級距表 (全自動表格化產出)",
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
