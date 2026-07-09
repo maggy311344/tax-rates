@@ -1,152 +1,184 @@
 {
-  "2023-24": {
+  "2023/24": {
     "resident": [
       {
-        "limit": 18200,
+        "min": 0,
+        "max": 18200,
         "rate": 0
       },
       {
-        "limit": 45000,
+        "min": 18200,
+        "max": 45000,
         "rate": 0.19
       },
       {
-        "limit": 120000,
+        "min": 45000,
+        "max": 120000,
         "rate": 0.325
       },
       {
-        "limit": 180000,
+        "min": 120000,
+        "max": 180000,
         "rate": 0.37
       },
       {
-        "limit": null,
+        "min": 180000,
+        "max": null,
         "rate": 0.45
       }
     ],
-    "foreign_resident": [
+    "foreign": [
       {
-        "limit": 120000,
+        "min": 0,
+        "max": 120000,
         "rate": 0.325
       },
       {
-        "limit": 180000,
+        "min": 120000,
+        "max": 180000,
         "rate": 0.37
       },
       {
-        "limit": null,
+        "min": 180000,
+        "max": null,
         "rate": 0.45
       }
     ]
   },
-  "2024-25": {
+  "2024/25": {
     "resident": [
       {
-        "limit": 18200,
+        "min": 0,
+        "max": 18200,
         "rate": 0
       },
       {
-        "limit": 45000,
+        "min": 18200,
+        "max": 45000,
         "rate": 0.16
       },
       {
-        "limit": 135000,
+        "min": 45000,
+        "max": 135000,
         "rate": 0.3
       },
       {
-        "limit": 190000,
+        "min": 135000,
+        "max": 190000,
         "rate": 0.37
       },
       {
-        "limit": null,
+        "min": 190000,
+        "max": null,
         "rate": 0.45
       }
     ],
-    "foreign_resident": [
+    "foreign": [
       {
-        "limit": 135000,
+        "min": 0,
+        "max": 135000,
         "rate": 0.3
       },
       {
-        "limit": 190000,
+        "min": 135000,
+        "max": 190000,
         "rate": 0.37
       },
       {
-        "limit": null,
+        "min": 190000,
+        "max": null,
         "rate": 0.45
       }
     ]
   },
-  "2025-26": {
+  "2025/26": {
     "resident": [
       {
-        "limit": 18200,
+        "min": 0,
+        "max": 18200,
         "rate": 0
       },
       {
-        "limit": 45000,
+        "min": 18200,
+        "max": 45000,
         "rate": 0.16
       },
       {
-        "limit": 135000,
+        "min": 45000,
+        "max": 135000,
         "rate": 0.3
       },
       {
-        "limit": 190000,
+        "min": 135000,
+        "max": 190000,
         "rate": 0.37
       },
       {
-        "limit": null,
+        "min": 190000,
+        "max": null,
         "rate": 0.45
       }
     ],
-    "foreign_resident": [
+    "foreign": [
       {
-        "limit": 135000,
+        "min": 0,
+        "max": 135000,
         "rate": 0.3
       },
       {
-        "limit": 190000,
+        "min": 135000,
+        "max": 190000,
         "rate": 0.37
       },
       {
-        "limit": null,
+        "min": 190000,
+        "max": null,
         "rate": 0.45
       }
     ]
   },
-  "2026-27": {
+  "2026/27": {
     "resident": [
       {
-        "limit": 18200,
+        "min": 0,
+        "max": 18200,
         "rate": 0
       },
       {
-        "limit": 45000,
+        "min": 18200,
+        "max": 45000,
         "rate": 0.15
       },
       {
-        "limit": 135000,
+        "min": 45000,
+        "max": 135000,
         "rate": 0.3
       },
       {
-        "limit": 190000,
+        "min": 135000,
+        "max": 190000,
         "rate": 0.37
       },
       {
-        "limit": null,
+        "min": 190000,
+        "max": null,
         "rate": 0.45
       }
     ],
-    "foreign_resident": [
+    "foreign": [
       {
-        "limit": 135000,
+        "min": 0,
+        "max": 135000,
         "rate": 0.3
       },
       {
-        "limit": 190000,
+        "min": 135000,
+        "max": 190000,
         "rate": 0.37
       },
       {
-        "limit": null,
+        "min": 190000,
+        "max": null,
         "rate": 0.45
       }
     ]
